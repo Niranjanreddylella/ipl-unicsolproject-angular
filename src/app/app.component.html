@@ -1,0 +1,134 @@
+<body class="c" style="width: 100%; height: 100%; background-image: url(../assets/101.jpg)">
+    <div align="center">
+        <h1 style="color: rgb(60, 192, 34)"> Indian Premier League</h1>
+    </div>
+    <div>
+        <img src="../assets/100.jpg" width="20%" height="100px">
+        <img src="../assets/101.jpg" width="20%" height="100px">
+        <img src="../assets/102.jpg" width="15%" height="100px">
+        <img src="../assets/103.jpg" width="25%" height="100px">
+        <img src="../assets/108.jpg" width="18%" height="100px">
+    </div>
+
+
+
+    <div class="background-image: url(../assets/107.jpg)">
+        <nav id="nav" class="navbar navbar-expand-sm bg-info  navbar-dark ">
+
+            <i class="glyphicon glyphicon- "></i>
+            <a class="navbar-brand" href="#">
+                <img src="../assets/107.jpg" alt="logo" style="width:40px;height:40px;">
+
+                <p style="font-size:20px"></p>
+            </a>
+            <ul id="ul" class="navbar-nav" style="font-size:20px; color: blue">
+                <li class="nav-item">
+                    <a class="nav-link" routerLink="">Home</a>
+                </li>
+
+                &nbsp; &nbsp;
+
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!lg" routerLink="home">players</a>
+                </li>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="lg" routerLink="home">players</a>
+                </li>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="lg" routerLink="ShowAll">ShowAllPlayers</a>
+                </li>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="lg" routerLink="players">AddPlayer</a>
+                </li>
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+
+
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!lg" routerLink="register">Register</a>
+                </li>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+
+                <li class="nav-item">
+                    <a class="nav-link" *ngIf="!lg" routerLink="login">Login</a>
+                </li>
+                &nbsp;
+                <!-- <li class="nav-item">
+                    <a>about</a>
+                </li>
+         -->
+            </ul>
+            <select *ngIf="lg" (change)="onSelect(n)" #n align="right">
+                <option>select teams</option>
+                <option>chenni</option>
+                <option>panjab</option>
+                <option>hydrabad</option>
+            </select>
+            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
+            &nbsp;
+
+            <li class="nav-item">
+                <a class="nav-link" *ngIf="lg" routerLink="logout" (click)="lnkLogoutClick()">
+                    <h4>logout</h4>
+                </a>
+            </li>
+
+
+        </nav>
+    </div>
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12">
+                <carousel [interval]="1500">
+                    <slide>
+                        <img src="assets/10.jpg" alt="first slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/6.jpg" alt="second slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/101.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/5.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/11.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/12.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/13.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/104.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/105.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/106.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                    <slide>
+                        <img src="assets/100.jpg" alt="third slide" style="display: block; width: 100%;">
+                    </slide>
+                </carousel>
+
+            </div>
+        </div>
+    </div>
+</body>
+<div class="body">
+
+    <router-outlet></router-outlet>
+</div>

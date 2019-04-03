@@ -1,0 +1,50 @@
+
+
+<h1>Player Details:</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-3">
+      <form #myfrm="ngForm">
+        <div class="form-group">
+          <label>PlayerId:</label>
+          <input type="text" #pid="ngModel" [(ngModel)]="pla.pid" class="form-control" name="pid" required>
+          
+        </div>
+        <div class="form-group">
+          <label for="">PlayerName:</label>
+          <input type="text" #pname="ngModel" [(ngModel)]="pla.pname" class="form-control" name="pname" required>
+         
+        </div>
+        <div class="form-group">
+          <label for="">Matches:</label>
+          <input type="text" #mat="ngModel" [(ngModel)]="pla.matches" class="form-control" name="matches" required>
+          
+        </div>
+        <div class="form-group">
+          <label for="">Runs:</label>
+          <input type="text" #rn="ngModel" [(ngModel)]="pla.runs" class="form-control" name="runs" required>
+          
+        </div>
+
+        <div class="form-group">
+          <label for="">BestScore:</label>
+          <input type="text" #bs="ngModel" [(ngModel)]="pla.best_score" class="form-control" name="best_score" required>
+         
+        </div>
+        <div class="form-group">
+          <label for="">Team:</label>
+          <input type="text" #tm="ngModel" [(ngModel)]="pla.team" class="form-control" name="team" required>
+        
+        </div>
+        <!-- <div class="form-group">
+          <label for="">Image:</label>
+          <input type="file" #tm="ngModel" [(ngModel)]="pla.pimage" class="form-control" name="pimage" required>
+        
+        </div>
+        -->
+       
+        <button type="button" class="btn btn-warning" (click)="Submitclick(myfrm)">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<h3 align="center"> showall players</h3>
+<!-- <div *ngIf="pla"> -->
+<table class="table">
+  <tr *ngFor="let ps of pla">
+    <!-- <tr> <th> playername</th></tr> -->
+    
+    <td>{{ps.pname}}</td>
+    <td>Matches:{{ps.matches}}</td>
+    <td>Runs:{{ps.runs}}</td>
+    <td>Best:{{ps.best_score}}</td>
+    <td>Team:{{ps.team}}</td>
+    <td><img [src]="ps.pimage" height="80px" width="80px"> </td>
+<!-- <td>     <img class="card-img-top"  [src]="a.pimage" id="img">
+</td> -->
+  
+    <td>
+        <button (click)="btnEditClick(ps.pid)" class="btn btn-success">update</button>
+
+      <button (click)="btnDel(ps.pid)" class="btn btn-danger">DELETE</button>
+
+    </td>
+  </tr>
+</table>

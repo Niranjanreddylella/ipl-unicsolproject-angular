@@ -1,0 +1,67 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5 col-md-offset-3">
+        <h1>player details</h1>
+
+
+      <form #myfrm="ngForm">
+        <div class="form-group">
+          <label>PlayerId:</label>
+          <input type="text" #pid="ngModel" [(ngModel)]="plyr.pid" class="form-control" name="pid" required>
+          <span *ngIf="pid.errors && (pid.touched || Plid.dirty)" style="color:red">
+            <span [hidden]="!pid.errors.required">player id Required ..</span>
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="">PlayerName:</label>
+          <input type="text" #pname="ngModel" [(ngModel)]="plyr.pname" class="form-control" name="pname" required>
+          <span *ngIf="pname.errors && (pname.touched || pname.dirty)" style="color:brown">
+            <span [hidden]="!pname.errors.required">player name  Required ..</span>
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="">Matches:</label>
+          <input type="text" #mat="ngModel" [(ngModel)]="plyr.matches" class="form-control" name="matches" required>
+          <span *ngIf="mat.errors && (mat.touched || mat.dirty)" style="color:brown">
+            <span [hidden]="!mat.errors.required">matches   Required ..</span>
+        </span>
+          
+        </div>
+        <div class="form-group">
+          <label for="">Runs:</label>
+          <input type="text" #rn="ngModel" [(ngModel)]="plyr.runs" class="form-control" name="runs" required>
+          <span *ngIf="rn.errors && (rn.touched || rn.dirty)" style="color:orangered">
+            <span [hidden]="!rn.errors.required">Runs  Required ..</span>
+        </span>
+        </div>
+
+        <div class="form-group">
+          <label for="">BestScore:</label>
+          <input type="text" #bs="ngModel" [(ngModel)]="plyr.best_score" class="form-control" name="best_score" required>
+          <span *ngIf="bs.errors && (bs.touched || bs.dirty)" style="color:brown">
+            <span [hidden]="!bs.errors.required">Beatscore score  Required ..</span>
+        </span>
+        </div>
+        <div class="form-group">
+          <label for="">Team:</label>
+          <input type="text" #tm="ngModel" [(ngModel)]="plyr.team" class="form-control" name="team" required>
+          <span *ngIf="tm.errors && (tm.touched || tm.dirty)" style="color:black">
+            <span [hidden]="!tm.errors.required">Team name  Required ..</span>
+        </span>
+        </div>
+        <div class="form-group">
+          Image:<img [src]="plyr.pimage" width="150px" height="150px">
+          
+          <input type="file" (change)="img($event)" [(ngModel)]="plyr.pimage" name="pimage" class="form-control">          
+        
+        </div>
+
+       
+
+           
+        <button type="button" class="btn btn-info" (click)="Submitclick(myfrm)">Add player</button>
+      </form>
+    </div>
+  </div>
+</div> 

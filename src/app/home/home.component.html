@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+      <div class="col-sm-6" *ngFor="let a of pl">
+        
+        <div class="card" style="width:300px">
+          <img class="card-img-top"  [src]="a.pimage" id="img">
+          <!-- <img [src]="ps.pimage" height="80px" width="80px">  -->
+          <div class="card-body">
+            <h4 class="card-title">{{a.pname}}</h4>
+            <p class="card-text">Team:{{a.team}}</p>
+           <button type="button" class="btn btn-secondery"(click)="detailsClick(a.pid)"> playerDetails</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
